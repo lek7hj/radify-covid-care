@@ -233,14 +233,13 @@
   //------- makeTimer js --------//  
   function makeTimer() {
 
-    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
-    var endTime = new Date("27 Sep 2019 12:56:00 GMT+01:00");
-    endTime = (Date.parse(endTime) / 1000);
+    var startTime = new Date("30 Mar 2020 12:56:00 GMT+01:00");
+    startTime = (Date.parse(startTime) / 1000);
 
     var now = new Date();
     now = (Date.parse(now) / 1000);
 
-    var timeLeft = endTime - now;
+    var timeLeft = now - startTime;
 
     var days = Math.floor(timeLeft / 86400);
     var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
